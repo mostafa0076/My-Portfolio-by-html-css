@@ -1,0 +1,610 @@
+
+  @import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+*{
+    font-family: 'Poppins', sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+}
+header{
+    background-color: rgb(179, 190, 202);
+    width: 100%;
+    position: fixed;
+    z-index: 999;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding:10px 200px ;
+}
+/* سكشن About */
+.about {
+    padding: 80px 20px;
+    background: #f9f9f9;
+    text-align: center;
+}
+
+/* العنوان */
+.about h2 {
+    font-size: 30px;
+    color: #2c3e50;
+    font-weight: bold;
+    margin-bottom: 20px;
+    position: relative;
+    display: inline-block;
+}
+
+/* خط تحت العنوان (ديكور) */
+.about h2::after {
+    content: '';
+    display: block;
+    width: 60px;
+    height: 3px;
+    background: #4a63e7;
+    margin: 8px auto 0;
+    border-radius: 2px;
+}
+/* العنوان */
+h2 {
+    font-size: 36px;
+    color: #9b0303;
+    margin-bottom: 20px;
+    font-weight: bold;
+}
+
+/* النص (p) */
+p {
+    font-size: 20px;           /* حجم خط متوسط مريح */
+    color: #070707;            /* رمادي غامق بدل الأسود */
+    line-height: 1.8;          /* مسافة بين السطور */
+    max-width: 750px;          /* نخلي النص عرضه محدود */
+    margin: 0 auto 30px;       /* يتوسّط الصفحة مع مسافة تحت */
+    text-align: left;          /* يبدأ من الشمال (أو right لو عربي) */
+    font-weight: bold;         /* خط سميك */
+    white-space: pre-line;     /* يخلي كل جملة تنزل سطر لو في النص Enter */
+}
+
+
+/* النص */
+.about p {
+    font-size: 18px;
+    color: #555;
+    max-width: 750px;
+    margin: 0 auto;
+    line-height: 1.7;
+}
+.logo{
+    text-decoration-line: none;
+    color: rgb(27, 4, 4);
+    text-transform: uppercase;
+    font-weight: 700;
+    font-size: 1.8em;
+    
+}
+.navigation a{
+    color: blue;
+    text-decoration: none;
+    font-size: 1.1em;
+    font-weight: 500;
+    padding-left: 30px;
+}
+.navigation a:hover{
+    color: aqua;
+}
+section {
+    padding: 100px 200px;
+}
+.main {
+    width: 100%;
+    min-height: 130vh;
+    display:flex;
+    align-items: center;
+    background-size: cover;
+    background-size: cover;
+    background-image: url("image/photo.png");
+    background-position: center;
+
+}
+
+
+.main h2{
+    color: #fff;
+    font-size: 1.4em;
+    font-weight: 600;
+}
+.main h2 span{
+    color: black;
+    font-size: 1.9em;
+    font-weight: 900;
+    display: inline-block;
+    margin-top: 5px;
+}
+.main h3{
+    color: #fff;
+    font-size: 2em;
+    font-weight: 700;
+    letter-spacing: 1px;
+    margin-top: 3px;
+    margin-bottom: 30px;
+}
+.main-btn{
+    color: #fff;
+    background-color: blue;
+    text-decoration: none;
+    font-size: 1.1em;
+    font-weight: 700;
+    display: inline-block;
+    padding: 0.9375em 2.1875em;
+    letter-spacing: 1px;
+    border-radius: 16px;
+    margin-bottom: 40px;
+    transition: .7s ease;
+}
+.main-btn:hover{
+    background-color: rgb(16, 16, 138);
+    transform: scale(1.1);
+}
+.socail-icons{
+    color: #fff;
+    font-size: 1.7em;
+    padding-right: 35px;
+}
+.title{
+    display: flex;
+    justify-content: center;
+    color: blue;
+    font-size:2.2 em ;
+    font-weight: 800;
+    margin-bottom: 30px;
+}
+.content {
+    display: flex;
+    justify-content: center;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+
+.card {
+    background-color: #fff;
+    width: 21.25em;
+    box-shadow: 0 5px 25px rgba(1 1 1 / 15%);
+    border-radius: 10px;
+    padding: 25px;
+    margin: 15px;
+    transition: 0.7s ease;
+}
+.card:hover {
+    transform: scale(1.1);
+}
+
+.card .icon {
+    color: #3a6cf4;
+    font-size: 8em;
+    text-align: center;
+}
+
+.info {
+    text-align: center;
+}
+
+.info h3{
+    color: #3a6cf4;
+    font-size: 1.2em;
+    font-weight: 700;
+    margin: 10px;
+}
+/* ==== Projects Section ==== */
+
+/* 1. تعديل لون الخلفية للقسم بالكامل */
+.projects {
+    background-color: #f0f2f5; /* لون رمادي فاتح ونظيف */
+    padding: 60px 20px; /* إضافة مساحات داخلية لتحسين الشكل */
+}
+
+/* 2. استخدام Flexbox لتوزيع الكروت بشكل منظم */
+.projects .content {
+    display: flex; /* تفعيل Flexbox */
+    flex-wrap: wrap; /* السماح للكروت بالنزول لسطر جديد عند امتلاء الصف */
+    justify-content: center; /* توسيط الكروت في المنتصف */
+    gap: 30px; /* مسافة ثابتة ومنظمة بين الكروت */
+    margin-top: 30px;
+}
+
+/* 3. تعديل تصميم الكارت نفسه */
+.project-card {
+    background-color: #ffffff; /* لون أبيض نقي للكارت */
+    border: 1px solid #e0e0e0; /* حدود ناعمة */
+    min-height: 14em;
+    width: calc(33.333% - 30px); /* **أهم جزء: يجبر على عرض 3 كروت بالصف** */
+    max-width: 380px; /* تحديد أقصى عرض للكارت ليبدو أفضل */
+    overflow: hidden;
+    border-radius: 15px; /* زيادة دائرية الحواف */
+    margin: 0; /* تم إزالة الـ margin القديم لأننا نستخدم gap */
+    transition: transform 0.4s ease, box-shadow 0.4s ease; /* تأثيرات انتقال أنعم */
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08); /* إضافة ظل احترافي */
+    display: flex;
+    flex-direction: column;
+}
+
+.project-card:hover {
+    transform: translateY(-10px); /* رفع الكارت للأعلى عند المرور عليه */
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.12); /* زيادة الظل للتأكيد */
+}
+
+/* 4. توحيد حجم الصور بشكل احترافي */
+.project-image {
+    width: 100%;
+    height: 220px; /* تحديد ارتفاع ثابت لكل الصور */
+    overflow: hidden;
+}
+
+.project-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* يجعل الصورة تملأ المساحة دون تشويه (يقص الأجزاء الزائدة) */
+    object-position: center; /* يركز على منتصف الصورة */
+}
+
+/* 5. تعديل حجم الخطوط والألوان داخل الكارت */
+.project-info {
+    padding: 1.5em; /* زيادة المساحة الداخلية */
+    flex-grow: 1; /* يجعل هذا الجزء يأخذ المساحة المتبقية */
+}
+
+.project-category {
+    font-size: 1em; /* تكبير الخط */
+    color: #666; /* لون أغمق وأوضح */
+    font-weight: 500;
+}
+
+.project-title {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    text-transform: uppercase;
+    font-weight: 800;
+    margin-top: 10px;
+    font-size: 1.2em; /* تكبير خط العنوان الرئيسي */
+    color: #1a253f;
+}
+
+/* استجابة الشاشات الصغيرة (Responsive) */
+@media (max-width: 1200px) {
+    .project-card {
+        width: calc(50% - 30px); /* عرض كارتين في الصف للشاشات المتوسطة */
+    }
+}
+
+@media (max-width: 768px) {
+    .project-card {
+        width: 100%; /* عرض كارت واحد في الصف لشاشات الجوال */
+    }
+}
+
+.more-details {
+    text-decoration: none;
+    color: #3a6cf4;
+}
+
+.more-details:hover {
+    color: #601cfc;
+}
+
+.contact .icon{
+    font-size: 4.5em;
+}
+
+.contact .info h3 {
+    color: #000;
+}
+.contact .info p {
+    font-size: 1.5em;
+}
+
+.footer {
+    background-color: #000016;
+    color: #fff;
+    padding: 2em;
+    display: flex;
+    justify-content: space-between;
+}
+
+.footer-title {
+    font-size: 1.3em;
+    font-weight: 600;
+}
+
+.footer-title span {
+    color: #3a6cf4;
+}
+
+.footer .social-icons a{
+    font-size: 1.3em;
+    padding: 0 12px 0 0;
+}
+
+@media (max-width:1023px){
+    header{
+        padding: 12px 20px;
+    }
+
+    .navigation a{
+        padding-left: 10px;
+    }
+
+    .title{
+        font-size: 1.8em;
+    }
+
+    section{
+        padding: 80px 20px;
+    }
+
+    .main-content h2{
+        font-size: 1em;
+    }
+
+    .main-content h3{
+        font-size: 1.6em;
+    }
+
+    .content{
+        flex-direction: column;
+        align-items: center;
+    }
+
+}
+
+@media (max-width:641px){
+    body{
+        font-size: 12px;
+    }
+
+    .main-content h2{
+        font-size: 0.8em;
+    }
+
+    .main-content h3{
+        font-size: 1.4em;
+    }
+}
+
+@media (max-width:300px){
+    body{
+        font-size: 10px;
+     
+    }
+}
+
+/* ===== Technical Skills Section ===== */
+.technical-skills {
+    background-color: #1a253f; /* لون خلفية داكن واحترافي */
+    padding: 100px 50px; /* مساحات مناسبة */
+    color: #fff; /* لون الخط أبيض */
+}
+
+/* تعديل العنوان ليتناسب مع الخلفية الداكنة */
+.technical-skills .title {
+    color: #fff; 
+}
+
+.skills-content {
+    display: flex;
+    justify-content: space-around; /* توزيع الأعمدة بمسافات متساوية */
+    flex-wrap: wrap; /* يسمح للأعمدة بالنزول لسطر جديد على الشاشات الصغيرة */
+    margin-top: 40px;
+    gap: 20px; /* مسافة بين الأعمدة */
+}
+
+.skill-column {
+    flex: 1; /* يجعل الأعمدة تأخذ مساحة متساوية */
+    min-width: 300px; /* أقل عرض للعمود قبل أن ينتقل لسطر جديد */
+    padding: 0 20px;
+}
+
+.skill-column h3 {
+    font-size: 1.4em;
+    font-weight: 700;
+    color: #4e9eff; /* لون مميز للعناوين الفرعية */
+    margin-bottom: 20px;
+    padding-bottom: 10px;
+    border-bottom: 2px solid #3a6cf4; /* خط تحت العنوان */
+    display: inline-block;
+}
+
+.skill-column ul {
+    list-style: none; /* إزالة النقاط الافتراضية */
+    padding: 0;
+}
+
+.skill-column ul li {
+    font-size: 1.1em;
+    font-weight: 500;
+    margin-bottom: 15px;
+    color: #e0e0e0; /* لون رمادي فاتح للنصوص */
+    display: flex;
+    align-items: center;
+}
+
+.skill-column ul li i {
+    color: #3a6cf4; /* لون أزرق للأيقونات */
+    margin-right: 15px; /* مسافة بين الأيقونة والنص */
+    font-size: 1.2em;
+    width: 20px; /* توحيد عرض مساحة الأيقونة */
+}
+
+/* ===== Education Section ===== */
+.education {
+    background-color: #1f1f1f; /* لون خلفية داكن مشابه للصورة */
+    padding: 100px 20px;
+}
+
+.education .title {
+    color: #fff;
+}
+
+.timeline-container {
+    max-width: 800px; /* تحديد عرض أقصى للمحتوى */
+    margin: 60px auto 0; /* توسيط العنصر مع مسافة من العنوان */
+}
+
+.timeline-item {
+    position: relative; /* ضروري لتحديد موضع الدائرة بشكل صحيح */
+}
+
+.timeline-number {
+    /* --- تصميم الدائرة --- */
+    width: 45px;
+    height: 45px;
+    background-color: #e91e63; /* لون وردي مميز */
+    border-radius: 50%; /* لجعلها دائرية */
+    color: #fff;
+    font-size: 1.5em;
+    font-weight: bold;
+    
+    /* --- لتوسيط الرقم داخل الدائرة --- */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    
+    /* --- لتحديد موضع الدائرة فوق الخط --- */
+    position: absolute;
+    top: -24px; /* لرفع الدائرة فوق الخط */
+    left: 50%;
+    transform: translateX(-50%); /* لتوسيط الدائرة أفقيًا */
+    z-index: 2; /* للتأكد من أنها فوق الخط والمحتوى */
+    border: 3px solid #1f1f1f; /* إضافة حدود بنفس لون الخلفية لإعطاء تأثير الفصل */
+}
+
+.timeline-content {
+    padding: 30px;
+    border: 2px solid #e91e63; /* الحدود الوردية */
+    border-radius: 10px;
+    position: relative;
+}
+
+.timeline-content h3 {
+    color: #fff;
+    font-size: 1.6em;
+    font-weight: 600;
+    margin-bottom: 10px;
+}
+
+.timeline-content .university,
+.timeline-content .date {
+    color: #ccc; /* لون رمادي فاتح للنصوص الثانوية */
+    font-size: 1.1em;
+    margin-bottom: 5px;
+}
+
+.university-logo {
+    text-align: center; /* توسيط الشعار */
+    margin-top: 25px;
+}
+
+.university-logo img {
+    max-width: 180px; /* تحديد عرض أقصى للشعار */
+    border-radius: 8px;
+    background-color: #fff; /* خلفية بيضاء للشعار إذا كان شفافًا */
+    padding: 5px;
+}
+/* ===== Courses & Certifications Section ===== */
+.certifications {
+    background-color: #121212; /* خلفية داكنة جداً */
+    padding: 100px 50px;
+    color: #f0f0f0; /* لون نص فاتح */
+}
+
+.certifications .title {
+    color: #fff;
+    margin-bottom: 50px;
+}
+
+.cert-content {
+    display: flex;
+    flex-direction: column; /* البطاقات ستكون مكدسة عموديًا */
+    gap: 40px; /* مسافة بين كل بطاقة شهادة */
+    max-width: 900px; /* تحديد أقصى عرض للمحتوى */
+    margin: 0 auto; /* توسيط المحتوى */
+}
+
+.cert-card {
+    background-color: #222; /* لون خلفية أغمق قليلاً للبطاقة */
+    border-left: 5px solid #007bff; /* شريط أزرق مميز على اليسار */
+    border-radius: 8px;
+    padding: 25px 30px;
+    display: flex;
+    align-items: flex-start; /* محاذاة العناصر للأعلى */
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.cert-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.4);
+}
+
+.cert-details {
+    flex-grow: 1; /* يجعل تفاصيل الشهادة تأخذ كل المساحة الممكنة */
+    margin-right: 20px;
+}
+
+.cert-details h3 {
+    color: #007bff; /* لون أزرق لعنوان الجهة */
+    font-size: 1.5em;
+    margin-bottom: 15px;
+    font-weight: 700;
+}
+
+.cert-details ul {
+    list-style: disc; /* نقاط عادية للقائمة */
+    margin-left: 25px; /* مسافة بادئة للقائمة */
+    padding: 0;
+}
+
+.cert-details ul li {
+    font-size: 1.1em;
+    margin-bottom: 8px;
+    line-height: 1.4;
+}
+
+.cert-details ul li:last-child {
+    margin-bottom: 0;
+}
+
+.cert-logo {
+    flex-shrink: 0; /* يمنع الشعار من التقلص */
+    width: 100px; /* عرض ثابت للشعار */
+    height: 100px; /* ارتفاع ثابت للشعار */
+    background-color: #333; /* خلفية للشعار إذا كان شفافاً أو صغيراً */
+    border-radius: 8px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden; /* لإخفاء أي جزء زائد من الصورة */
+}
+
+.cert-logo img {
+    max-width: 90%; /* حجم الصورة داخل مربع الشعار */
+    max-height: 90%;
+    object-fit: contain; /* لتناسب الصورة بالكامل داخل المساحة المخصصة */
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .cert-card {
+        flex-direction: column; /* في الشاشات الصغيرة، يصبح الشعار تحت التفاصيل */
+        align-items: center;
+        text-align: center;
+    }
+
+    .cert-details {
+        margin-right: 0;
+        margin-bottom: 20px; /* مسافة بين التفاصيل والشعار */
+    }
+
+    .cert-details ul {
+        margin-left: 0;
+        text-align: left; /* للحفاظ على محاذاة القائمة لليسار */
+    }
+}
